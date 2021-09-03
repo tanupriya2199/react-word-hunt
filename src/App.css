@@ -1,38 +1,90 @@
-.App {
-  text-align: center;
+
+.mainContainer{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 7vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 35vh;
+    width: 100%; 
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+@media(max-width : 900) {
+    .header{
+        height: 25vh;
+    }
+    .title{
+        font-size: 11vw;
+    }
 }
 
-.App-link {
-  color: #61dafb;
+.inputs{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search, .select{
+    width: 42%;
+}
+
+.meaningsContainer{
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    height: 55vh;
+    border: 10px solid rgb(105,105,105);
+    border-radius:  10px;
+    padding: 10px 20px;
+    overflow-x: hidden;
+}
+
+.subtitle{
+    font-size: 10vh;
+    font-family: 'Montserrat', sans-serif;
+}   
+
+.singleMeaning{
+   
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+}
+
+@media (max-width : 900) {
+    .meaningsContainer{
+        height: 60vh;
+    }
+
+    .subtitle{
+        font-size: 2vh;
+    }
+}
+
+.audio{
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+}
+
+.themeSwitchContainer{
+    position : absolute;
+    top: 0;
+    right: 20px;
+    padding-top:  10px;
 }
